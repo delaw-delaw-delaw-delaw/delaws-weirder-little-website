@@ -8,7 +8,7 @@ html,
 body {
   margin: 0;
   height: 100%;
-  cursor: url("/frontend/imgs/cursor.png"), auto;
+  cursor: url("imgs/cursor.png"), auto;
   background: linear-gradient(#fff 90%, rgb(215, 140, 211));
 }
 

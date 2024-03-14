@@ -31,7 +31,7 @@ for (i = 1; i <= 80; i++) {
 }
 
 function playsound() {
-    var hoversound = new Audio('/frontend/sounds/hover.mp3')
+    var hoversound = new Audio('sounds/hover.mp3')
     if (hoversound.paused) {
         hoversound.play()
     } else {
@@ -40,7 +40,7 @@ function playsound() {
     hoversound.volume = 0.3;
 }
 
-var song = new Audio('/frontend/sounds/thankyousomuchtoyotacorolla.mp3')
+var song = new Audio('sounds/thankyousomuchtoyotacorolla.mp3')
 
 function playsong() {
     var bar = document.getElementById("lengthbar");
