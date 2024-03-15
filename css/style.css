@@ -8,11 +8,16 @@ html,
 body {
   margin: 0;
   height: 100%;
-  cursor: url("imgs/cursor.png"), auto;
+  cursor: url("/imgs/cursor.png"), auto;
   background: linear-gradient(#fff 90%, rgb(215, 140, 211));
+  overflow: hidden;
 }
 
-.maindiv, .aereadiv {
+#container2 {
+  display: none;
+}
+
+#maindiv, #aereadiv, #bigmaindiv {
   margin-left: 20%;
   margin-top: 5%;
   width: 45em;
@@ -20,27 +25,26 @@ body {
   background-color: rgb(247, 247, 247);
   border: 5px solid rgb(147, 142, 151);
   border-radius: 5%;
-  position: relative;
+  position: absolute;
   z-index: 1;
   overflow: hidden;
+  animation: bigandblurin 1s ease-out;
 }
 
 #og {
   display: none;
 }
 
-.aereadiv {
-  margin-top: 0;
-  margin-left: 6em;
+#aereadiv {
+  margin-left: 52em;
   z-index: 0;
-  position: absolute;
   background: linear-gradient(rgb(255, 204, 252), #fff 80%);
-  transform: translateX(100%);
   border: 5px double rgb(147, 142, 151);
-  text-align: center;
+  text-align: right;
+  animation: bigandblurin 1s ease-out;
 }
 
-.aereadiv:before {
+#aereadiv:before {
   content: "Complementary Aerea";
   font-family: "Open Sans", sans-serif;
   color: rgb(63, 13, 50);
@@ -108,7 +112,6 @@ body {
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
-  animation: otherspin 4s ease infinite;
 }
 
 .circlecontainer .circle {
@@ -165,7 +168,23 @@ body {
   transition: 0.2s linear;
 }
 
-.playbutton:active {
+.backbutton {
+  width: 100px;
+  height: 100px;
+  border: 4px solid rgb(184, 113, 255);
+  border-radius: 50%;
+  background: linear-gradient(rgb(251, 243, 254) 25%, #dfb8df 90%, rgb(209, 137, 197) 99%);
+  margin: auto;
+  margin-top: 2em;
+  transition: 0.2s ease-in-out;
+}
+
+.blurred {
+  animation: bigandblurout ease-in-out 2s !important;
+  animation-fill-mode: forwards !important;
+}
+
+.playbutton:active, .backbutton:active {
   transform: scale(0.9, 0.9);
 }
 
@@ -187,9 +206,42 @@ body {
   background-color: rgb(119, 59, 124);
 }
 
+#bigmaindiv {
+  margin-left: 29%;
+  width: 52em;
+  text-align: center;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  line-height: 1.5em;
+  overflow: scroll;
+  background: linear-gradient(#fff 80%, #ffb4f0);
+  position: fixed;
+}
+
 @keyframes spin {
   100% {
     transform: rotate(360deg);
+  }
+}
+@keyframes bigandblurout {
+  10% {
+    transform: scale(0.95, 0.95);
+  }
+  100% {
+    transform: scale(3, 3);
+    opacity: 0;
+    filter: blur(3em);
+  }
+}
+@keyframes bigandblurin {
+  0% {
+    transform: scale(0, 0);
+    filter: blur(3em);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1, 1);
+    filter: blur(0);
+    opacity: 1;
   }
 }
 @keyframes translate {

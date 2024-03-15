@@ -31,7 +31,7 @@ for (i = 1; i <= 80; i++) {
 }
 
 function playsound() {
-    var hoversound = new Audio('sounds/hover.mp3')
+    var hoversound = new Audio('/sounds/hover.mp3')
     if (hoversound.paused) {
         hoversound.play()
     } else {
@@ -39,6 +39,43 @@ function playsound() {
     }
     hoversound.volume = 0.3;
 }
+
+function addblur(i) {
+
+    var page1 = document.getElementById("container");
+    var page2 = document.getElementById("container2");
+
+    if (i == 1) {
+        page1.classList.add("blurred");
+        page2.classList.remove("blurred");
+        window.setTimeout(function() {
+            page2.style.display = "block";
+            page1.style.display = "none"
+        }, 1500)
+    } else if (i == 2) {
+        maindiv.classList.add("blurred");
+        aereadiv.classList.add("blurred");
+    } else if (i == 3) {
+        maindiv.classList.add("blurred");
+        aereadiv.classList.add("blurred");
+    } else if (i == 4) {
+        page2.classList.add("blurred");
+        page1.classList.remove("blurred");
+        window.setTimeout(function() {
+            page1.style.display = "block";
+            page2.style.display = "none"
+        }, 1500)
+    }
+
+    var hoversound = new Audio('/sounds/hover.mp3')
+    if (hoversound.paused) {
+        hoversound.play()
+    } else {
+        hoversound.currentTime = 0;
+    }
+    hoversound.volume = 0.3;
+}
+
 
 var song = new Audio('sounds/thankyousomuchtoyotacorolla.mp3')
 
@@ -49,12 +86,12 @@ function playsong() {
         song.play()
         song.volume = 0;
         setInterval(
-            function() {
-              if (vol < 1) {
-                vol += 0.005;
-                song.volume = vol
-            }
-        }, 10);
+            function () {
+                if (vol < 1) {
+                    vol += 0.005;
+                    song.volume = vol
+                }
+            }, 10);
         bar.style.transition = Math.floor(song.duration) + "s linear";
         bar.style.transform = "translateY(100%)"
     } else {
@@ -75,4 +112,5 @@ function funnyquips() {
     var dice = Math.floor(Math.random() * (funnytable.length));
     document.title = (funnytable[dice])
 }
+
 window.onload = funnyquips();
