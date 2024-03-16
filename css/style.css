@@ -9,15 +9,18 @@ body {
   margin: 0;
   height: 100%;
   cursor: url("/imgs/cursor.png"), auto;
-  background: linear-gradient(#fff 90%, rgb(215, 140, 211));
+  background: url("/imgs/floor.png");
+  background-size: 50%;
   overflow: hidden;
 }
 
-#container2 {
+#container2, #container3, #container4 {
   display: none;
 }
 
-#maindiv, #aereadiv, #bigmaindiv {
+#maindiv,
+#aereadiv,
+#bigmaindiv {
   margin-left: 20%;
   margin-top: 5%;
   width: 45em;
@@ -36,12 +39,27 @@ body {
 }
 
 #aereadiv {
-  margin-left: 52em;
+  margin-left: 42.5%;
   z-index: 0;
-  background: linear-gradient(rgb(255, 204, 252), #fff 80%);
+  background: linear-gradient(rgb(255, 204, 252) 10%, #fff 50%);
   border: 5px double rgb(147, 142, 151);
   text-align: right;
   animation: bigandblurin 1s ease-out;
+}
+
+#slowme:hover {
+  transform: scale(1.1, 1.1);
+}
+
+#slowme {
+  background-image: url(/imgs/yaugh.png);
+  animation: animspeed 20s steps(17) infinite;
+  background-size: 1700%;
+  left: 8.5em;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: 0.5s ease-in-out;
 }
 
 #aereadiv:before {
@@ -56,6 +74,25 @@ body {
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
   margin-left: 8em;
+}
+
+#gallery {
+  margin-top: 1em;
+  width: 75%;
+  margin: auto;
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: scroll;
+  border: 4px solid rgb(184, 113, 255);
+  border-top-left-radius: 15%;
+  border-top-right-radius: 15%;
+}
+
+.ingallery {
+  max-height: 20em;
+  padding-left: 2px;
+  padding-top: 1em;
+  padding-bottom: 1em;
 }
 
 .maindivstripes {
@@ -142,7 +179,9 @@ body {
   border-radius: 50%;
 }
 
-.sidebarimg, .rightsidebarimg, .fakeaudiothingies {
+.sidebarimg,
+.rightsidebarimg,
+.fakeaudiothingies {
   position: absolute;
   top: 0%;
   width: 14.5%;
@@ -152,7 +191,8 @@ body {
   border-radius: 50px;
 }
 
-.rightsidebarimg, .fakeaudiothingies {
+.rightsidebarimg,
+.fakeaudiothingies {
   transform: translateX(34.5em);
 }
 
@@ -161,11 +201,11 @@ body {
   z-index: 1;
 }
 
-.playbutton {
+#playbutton {
   width: 75px;
   margin-left: 20px;
   margin-top: 10px;
-  transition: 0.2s linear;
+  transition: transform 0.2s linear;
 }
 
 .backbutton {
@@ -184,7 +224,8 @@ body {
   animation-fill-mode: forwards !important;
 }
 
-.playbutton:active, .backbutton:active {
+#playbutton:active,
+.backbutton:active {
   transform: scale(0.9, 0.9);
 }
 
@@ -217,6 +258,14 @@ body {
   position: fixed;
 }
 
+@keyframes animspeed {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 1700%;
+  }
+}
 @keyframes spin {
   100% {
     transform: rotate(360deg);
