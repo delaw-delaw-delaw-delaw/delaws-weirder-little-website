@@ -31,7 +31,7 @@ for (i = 1; i <= 80; i++) {
 }
 
 function playsound() {
-    var hoversound = new Audio('../sounds/hover.mp3')
+    var hoversound = new Audio('../sounds/hover.mp3?raw=true')
     if (hoversound.paused) {
         hoversound.play()
     } else {
@@ -94,7 +94,7 @@ function addblur(i) {
 
 
 
-    var hoversound = new Audio('../sounds/hover.mp3')
+    var hoversound = new Audio('../sounds/hover.mp3?raw=true')
     if (hoversound.paused) {
         hoversound.play()
     } else {
@@ -124,7 +124,7 @@ function speedUp() {
 
     speedable.style.animation = "animspeed " + speed + "s steps(17) infinite";
 }
-var song = new Audio('../sounds/thankyousomuchtoyotacorolla.mp3')
+var song = new Audio('../sounds/thankyousomuchtoyotacorolla.mp3?raw=true')
 function playsong() {
     var bar = document.getElementById("lengthbar");
     var button = document.getElementById("playbutton");
@@ -143,12 +143,12 @@ function playsong() {
         bar.style.transition = Math.floor(song.duration) + "s linear";
         bar.style.transform = "translateY(100%)"
 
-        button.src = "/imgs/couged2.png"
+        button.src = "../imgs/couged2.png"
         button.style.marginLeft = "15px"
     } else {
         song.pause()
         bar.style.transform = "translateY(0%)"
-        button.src = "/imgs/couged.png"
+        button.src = "../imgs/couged.png"
         button.style.marginLeft = "20px"
     }
 }
