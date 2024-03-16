@@ -8,8 +8,8 @@ html,
 body {
   margin: 0;
   height: 100%;
-  cursor: url("imgs/cursor.png"), auto;
-  background: url("imgs/floor.png");
+  cursor: url("https://github.com/Delaw-Delaw-Delaw/delaws-weirdo-little-website/blob/main/imgs/cursor.png"), auto;
+  background: url("https://github.com/Delaw-Delaw-Delaw/delaws-weirdo-little-website/blob/main/imgs/floor.png");
   background-size: 50%;
   overflow: hidden;
 }
@@ -52,7 +52,7 @@ body {
 }
 
 #slowme {
-  background-image: url(imgs/yaugh.png);
+  background-image: url("https://github.com/Delaw-Delaw-Delaw/delaws-weirdo-little-website/blob/main/imgs/yaugh.png");
   animation: animspeed 20s steps(17) infinite;
   background-size: 1700%;
   left: 8.5em;
