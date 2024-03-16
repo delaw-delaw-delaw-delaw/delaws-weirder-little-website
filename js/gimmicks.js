@@ -31,7 +31,7 @@ for (i = 1; i <= 80; i++) {
 }
 
 function playsound() {
-    var hoversound = new Audio('/sounds/hover.mp3')
+    var hoversound = new Audio('../sounds/hover.mp3')
     if (hoversound.paused) {
         hoversound.play()
     } else {
@@ -94,7 +94,7 @@ function addblur(i) {
 
 
 
-    var hoversound = new Audio('/sounds/hover.mp3')
+    var hoversound = new Audio('../sounds/hover.mp3')
     if (hoversound.paused) {
         hoversound.play()
     } else {
@@ -104,8 +104,8 @@ function addblur(i) {
 }
 
 var speed = 20;
-var woo = new Audio ('/sounds/woo.wav')
-var thinkbreak = new Audio ('/sounds/thinkbreak174bpm.wav')
+var woo = new Audio ('../sounds/woo.wav')
+var thinkbreak = new Audio ('../sounds/thinkbreak174bpm.wav')
 function speedUp() {
     var speedable = document.getElementById("slowme");
     if (speed > 1) {
@@ -124,7 +124,7 @@ function speedUp() {
 
     speedable.style.animation = "animspeed " + speed + "s steps(17) infinite";
 }
-var song = new Audio('sounds/thankyousomuchtoyotacorolla.mp3')
+var song = new Audio('../sounds/thankyousomuchtoyotacorolla.mp3')
 function playsong() {
     var bar = document.getElementById("lengthbar");
     var button = document.getElementById("playbutton");
