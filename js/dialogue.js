@@ -361,7 +361,7 @@ function addflip() {
 function capitalismsucks() {
     const everything = document.querySelectorAll('*')
     const ka = document.getElementById('kaboom')
-    const boom = new Audio('/sounds/soundbytes/explosion.mp3')
+    const boom = new Audio('sounds/soundbytes/explosion.mp3')
 
     ka.style.display = "block";
     boom.play()
