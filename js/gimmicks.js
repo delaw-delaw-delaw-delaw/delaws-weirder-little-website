@@ -141,10 +141,10 @@ function speedUp() {
     if (executable == true) {
         if (speed > 0.3) {
             woo.play();
-            woo.volume = 0.3;
+            woo.volume = 0.08;
         } else {
             thinkbreak.play();
-            thinkbreak.volume = 0.3;
+            thinkbreak.volume = 0.08;
             funnies++;
 
             executable = false;
