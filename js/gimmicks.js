@@ -119,7 +119,7 @@ function addblur(i) {
     } else {
         hoversound.currentTime = 0;
     }
-    hoversound.volume = 0.3;
+    hoversound.volume = 0.08;
 }
 
 var speed = 20;

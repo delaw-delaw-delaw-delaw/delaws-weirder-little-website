@@ -327,11 +327,13 @@ var twads = [
 ]
 
 const dqsprite = document.getElementById("dq")
-var currentDialogue = 0;
 
+
+var currentDialogue = 0;
 var t = 0;
 var x = 0;
 var interval = 0;
+
 const mouthes = [
     "imgs/dqsprites/mouth1.png",
     "imgs/dqsprites/mouth2.png"
@@ -339,14 +341,14 @@ const mouthes = [
 var og = document.getElementsByClassName("bog");
 let bePatient = true;
 const ccontainer = document.getElementById("choicecontainers")
-const talksound = new Audio('./sounds/soundbytes/audiobyte.wav')
+const talksound = new Audio('../sounds/soundbytes/audiobyte.wav')
 var dqcont = document.getElementById("dqcont")
 const dialogbubble = document.getElementById("speechbubble")
 
 function addflip() {
     var dq = document.getElementById("dq")
 
-    const suck = new Audio('./sounds/soundbytes/toohSebuTbooN.wav')
+    const suck = new Audio('../sounds/soundbytes/toohSebuTbooN.wav')
     suck.play()
     suck.volume = 0.08
 
