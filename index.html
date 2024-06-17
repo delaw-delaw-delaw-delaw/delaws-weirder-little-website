@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
         rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="imgs/favicon.png">
+
 </head>
 
 <body>
@@ -18,6 +19,29 @@
             <div class="circle"></div>
         </div>
     </div>
+    <div id="kaboom"></div>
+    <div id="robloxannouncement">All Secrets Collected!</div>
+    <div id="aphexcont">
+        <img src="imgs/tinyaphex.png" onclick="boo()" id="thispecificaphex" style="width:20px;">
+    </div>
+    <div id="dialogcont">
+        <div id="dqcont">
+            <div id="speechbubble">
+                <p id="talktext"></p>
+                <div id="choicecontainers">
+                    <button onclick="playtalksounds()" id="0" class="fancifybutton bog">...</button>
+                </div>
+            </div>
+            <div id="dq">
+                <img id="mouth" src="imgs/dqsprites/mouth1.png">
+            </div>
+        </div>
+        <div id="dqdcont">
+            <div class="floatingdq">
+            </div>
+        </div>
+    </div>
+
     <div id="container">
         <div id="maindiv">
             <div class="maindivstripes"></div>
@@ -62,7 +86,8 @@
                 probably
                 do, as I don't
                 really have a notable online presence outside! <br> FOR NOW. <br>
-                <img src="imgs/tinyaphex.png" style="width:20px;"> <br> But yeah! A few things you probably don't want
+                <img src="imgs/tinyaphex.png" onclick="boo()" style="width:20px;">
+                <br> But yeah! A few things you probably don't want
                 to
                 know:
             <ul>
@@ -145,13 +170,15 @@
                 </li>
                 <div id="gallery">
                     <img class="ingallery"
-                        src="https://cdn.discordapp.com/attachments/1214264155981353041/1214266047247683615/modelpreview.gif?ex=6601b6e1&is=65ef41e1&hm=8b94c5cdbd40c79ed915e87c4bfc4c73c5cb68db325923c5ee631fff0d374ba5&">
+                        src="./imgs/herrspin.gif">
                     <img class="ingallery"
-                        src="https://cdn.discordapp.com/attachments/1214264155981353041/1214265591872102470/ycspin.gif?ex=6601b675&is=65ef4175&hm=8b4fea0aad8f5ceacc69e05314268e142ec421166823e4ef022e1f01cdfae246&">
+                        src="./imgs/modelpreview.gif">
                     <img class="ingallery"
-                        src="https://cdn.discordapp.com/attachments/1214264155981353041/1214264158086762506/herrspin.gif?ex=6601b51f&is=65ef401f&hm=71fe753092ea875fb2f4322de664c40703064d3a4bed4dd4bed5c3428c8911a9&">
+                        src="./imgs/ycspin.gif">
                     <img class="ingallery"
-                        src="https://cdn.discordapp.com/attachments/1214264155981353041/1214266825278496798/render.gif?ex=6601b79b&is=65ef429b&hm=377c54979840a317d4c68cb609158021b2cfc3f00790faaef570823b78136e00&">
+                        src="./imgs/render.gif">
+                    <img class="ingallery" id="pressable"
+                        src="./imgs/unpressedbutton.png">
                 </div>
                 <span style="font-size:10px;"> Maybe one of these days I'll open up commissions... </span>
                 </p>
@@ -191,7 +218,8 @@
                     style="font-size:10px">No twitter! NO TWITTER!!! ROAAR</span></p>
         </div>
     </div>
-    <script src="js/gimmicks.js"></script>
+    <script src="/js/gimmicks.js" ></script>
+    <script src="/js/dialogue.js" ></script>
 </body>
 
 </html>
