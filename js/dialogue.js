@@ -341,14 +341,14 @@ const mouthes = [
 var og = document.getElementsByClassName("bog");
 let bePatient = true;
 const ccontainer = document.getElementById("choicecontainers")
-const talksound = new Audio('../sounds/soundbytes/audiobyte.wav')
+const talksound = new Audio('sounds/soundbytes/audiobyte.wav')
 var dqcont = document.getElementById("dqcont")
 const dialogbubble = document.getElementById("speechbubble")
 
 function addflip() {
     var dq = document.getElementById("dq")
 
-    const suck = new Audio('../sounds/soundbytes/toohSebuTbooN.wav')
+    const suck = new Audio('sounds/soundbytes/toohSebuTbooN.wav')
     suck.play()
     suck.volume = 0.08
 
