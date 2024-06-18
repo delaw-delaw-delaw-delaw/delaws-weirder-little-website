@@ -148,7 +148,7 @@ var twads = [
         { r: "She is amazing and awesome in <br> every way possible, where <br> can I talk to her?", next:"thanks" },
         { r: "I don't like any of these dialogue options.", next:"coward" },
     ]},
-    { label:"coward", m:"Booring. You should have picked one of the extreme and unreasonable dialogue optins. They're funny.", answers: [
+    { label:"coward", m:"Booring. You should have picked one of the extreme and unreasonable dialogue options. They're funny.", answers: [
         { r: "No.", next:"hub" },
     ]},
     { label:"thanks", m:"I can't say I agree, but I would assume \"My Socials\" has what you're looking for.", answers: [
@@ -214,7 +214,7 @@ var twads = [
     { label:"name", m:"Earth. Big Money wants us to call it \"Futuria\",", answers: [
         { r: "..." },
     ]},
-    {m:"But no one's gonna do that.,", answers: [
+    {m:"But no one's gonna do that.", answers: [
         { r: "Oh. About something else...", next:"hub" },
         { r: "Do you know anything about <br> the early 2000's?" },
     ]},
