@@ -294,14 +294,11 @@ body {
     text-align: center;
 }
 
-.buttons:before {
-    position: absolute;
-    width: 40%;
-    height: 15%;
-    margin-left: -20%;
-    background: linear-gradient(rgba(255, 255, 255, 0.5)70%, rgba(255, 255, 255, 0));
-    border-radius: 50%;
-    content: '';
+.buttons img {
+    width: 40px;
+    position:relative;
+    top: 5px;
+    border-radius: 25%;
 }
 
 .buttons:active {
