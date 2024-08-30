@@ -1,3 +1,4 @@
+// it applies especially to this file. Single Responsibility Principle went to hell with this 1
 var twads = [
     {
         m: "...", answers: [
@@ -424,7 +425,7 @@ function playtalksounds() {
         voice = setInterval(function () {
             talksound.load();
             talksound.play();
-            talksound.volume = 0.1;
+            talksound.volume = 0.5;
             t = (t + 1 == 2) ? 0 : 1;
 
             if (t == 0) {
